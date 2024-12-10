@@ -10,5 +10,7 @@ public class Obj {
         Obj centerObj = new Obj();
 
         centerObj.up = new Obj();
+
+        System.out.println((char) 81);
     }
 }
