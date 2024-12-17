@@ -1,5 +1,7 @@
 package com.app._12_12_2024;
 
+import java.util.Objects;
+
 public class Company {
     private int id;
     private String name;
@@ -43,6 +45,19 @@ public class Company {
         if(param < 1) {
             System.out.println("ID has tobe positive integer!!!");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Company company = (Company) o;
+        return id == company.id && Objects.equals(name, company.name) && Objects.equals(address, company.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, address);
     }
 
     @Override

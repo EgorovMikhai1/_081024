@@ -1,6 +1,8 @@
 package com.app._12_12_2024;
 
 public class MethodExample {
+
+
     void doSmth() {
 
     }
