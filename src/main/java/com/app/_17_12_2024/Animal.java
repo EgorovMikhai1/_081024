@@ -1,6 +1,7 @@
 package com.app._17_12_2024;
 
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
 public class Animal {
@@ -16,6 +17,11 @@ public class Animal {
     public void makeVoice() {
         System.out.println("ANIMAL MAKE NOISE");
     }
+
+    @Override
+    public String toString() {
+        return "Animal";
+    }
 }
 
 class Person22 {
@@ -26,8 +32,8 @@ class Person22 {
 
 class Cat extends Animal {
     public Cat(String name, int age) {
-        System.out.println("CAT");
         super(name, age);
+        System.out.println("CAT");
     }
 
     @Override
